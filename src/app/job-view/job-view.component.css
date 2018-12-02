@@ -1,3 +1,6 @@
-.title{
+.title {
   display: flex;
+}
+.left {
+  left: 10px !important;
 }

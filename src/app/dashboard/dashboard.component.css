@@ -10,5 +10,10 @@
 .search-bar{
   float: right;
 }
+.logo{
+  float: left;
+  height: 200px;
+}
+
 
 
