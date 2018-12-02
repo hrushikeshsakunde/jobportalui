@@ -1,0 +1,45 @@
+ <form #jobForm="ngForm" (ngSubmit)="save(jobForm.value)">
+      <h2 mat-dialog-title>{{job.id ? 'Edit' : 'Add'}} Job</h2>
+    <div mat-dialog-content>
+      <input type="hidden" name="href" [(ngModel)]="job.href">
+      <mat-form-field>
+        <input matInput placeholder="title" [(ngModel)]="job.title"
+               required name="title" #title>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput placeholder="Content" [(ngModel)]="job.content"
+               required name="content" #content></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput placeholder="Your Task" [(ngModel)]="job.tasks"
+               required name="tasks" #tasks ></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput placeholder="Your profile" [(ngModel)]="job.profile"
+               required name="profile" #profile ></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput placeholder="We offer" [(ngModel)]="job.offer"
+               required name="offer" #offer ></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="location" [(ngModel)]="job.location"
+               required name="location" #location>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput [matDatepicker]="myDatepicker" [min]="todayDate" [(ngModel)]="job.beginning" name="beginning" placeholder="Start Date" >
+        <mat-datepicker-toggle matSuffix [for]="myDatepicker" ></mat-datepicker-toggle>
+        <mat-datepicker #myDatepicker ></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Company Name " [(ngModel)]="job.companyName"
+               required name="companyName" #companyName>
+      </mat-form-field>
+    </div>
+    <div mat-dialog-actions align="end">
+      <button mat-raised-button color="primary" type="submit"
+              [disabled]="!jobForm.form.valid">Save</button>
+      <a mat-button (click)="dialogRef.close();">Cancel</a>
+    </div>
+  </form>
+
