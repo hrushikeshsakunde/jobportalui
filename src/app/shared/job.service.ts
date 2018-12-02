@@ -35,6 +35,10 @@ export class JobService {
     return this.http.delete(this.API + '/' + id);
   }
 
+  search(searchKey: string): Observable<any> {
+    return this.http.get(this.API + '/search/' + searchKey);
+  }
+
 
 
 }

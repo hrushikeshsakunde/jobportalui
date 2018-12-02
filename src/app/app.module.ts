@@ -8,8 +8,9 @@ import { MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolb
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JobEditComponent } from './job-edit/job-edit.component';
 import { FormsModule } from '@angular/forms';
-import { MatDatepickerModule, MatNativeDateModule } from '@angular/material';
+import { MatDatepickerModule, MatNativeDateModule, MatIconModule } from '@angular/material';
 import { JobViewComponent } from './job-view/job-view.component';
+import { NgMatSearchBarModule } from 'ng-mat-search-bar';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,9 @@ import { JobViewComponent } from './job-view/job-view.component';
     MatGridListModule,
     FormsModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    NgMatSearchBarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
