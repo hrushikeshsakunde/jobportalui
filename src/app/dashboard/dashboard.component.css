@@ -12,8 +12,15 @@
 }
 .logo{
   float: left;
-  height: 200px;
+  height: 180px;
 }
+.control-bar{
+  display: flex;
+}
+.element{
+  margin-left: 5%;
+}
+
 
 
 

@@ -4,13 +4,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolbarModule, MatGridListModule} from '@angular/material';
+import { MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolbarModule, MatGridListModule, MatChipsModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JobEditComponent } from './job-edit/job-edit.component';
 import { FormsModule } from '@angular/forms';
 import { MatDatepickerModule, MatNativeDateModule, MatIconModule } from '@angular/material';
 import { JobViewComponent } from './job-view/job-view.component';
 import { NgMatSearchBarModule } from 'ng-mat-search-bar';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NgMatSearchBarModule } from 'ng-mat-search-bar';
     MatDatepickerModule,
     MatNativeDateModule,
     NgMatSearchBarModule,
-    MatIconModule
+    MatIconModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

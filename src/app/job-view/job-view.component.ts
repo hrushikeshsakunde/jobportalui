@@ -26,6 +26,9 @@ export class JobViewComponent implements OnInit {
         });
       }
   }
+  getImage(id) {
+    return this.jobService.getImage(id);
+  }
 
 
 }

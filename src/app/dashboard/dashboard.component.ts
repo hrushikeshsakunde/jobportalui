@@ -62,4 +62,7 @@ export class DashboardComponent implements OnInit {
       this.fetchData();
     }
   }
+  imagePath(id) {
+    return this.jobService.getImage(id);
+  }
 }

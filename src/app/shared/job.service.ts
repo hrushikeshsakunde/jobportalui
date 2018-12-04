@@ -39,6 +39,12 @@ export class JobService {
     return this.http.get(this.API + '/search/' + searchKey);
   }
 
-
+  getImage(id){
+    if (id % 2 === 0  ) {
+      return '../assets/logo1.png';
+    } else {
+      return '../assets/logo1.jpg' ;
+    }
+  }
 
 }
