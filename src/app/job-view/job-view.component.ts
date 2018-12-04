@@ -13,7 +13,7 @@ export class JobViewComponent implements OnInit {
   constructor(private jobService: JobService,
               @Inject(MAT_DIALOG_DATA) public data: any,
               public dialogRef: MatDialogRef<JobViewComponent>) { }
-
+  /* Get data of job  */
   ngOnInit() {
       if (this.data.id) {
         this.jobService.get(this.data.id).subscribe((job: any) => {
@@ -26,6 +26,7 @@ export class JobViewComponent implements OnInit {
         });
       }
   }
+  /* Get logo of company  */
   getImage(id) {
     return this.jobService.getImage(id);
   }

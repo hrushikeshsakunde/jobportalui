@@ -2,11 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-
+/* Provides service to create,delete,edit and Search job using httpclient   */
 @Injectable({
   providedIn: 'root'
 })
 export class JobService {
+
 
   public API = '//localhost:8080/api/v1/jobs';
 

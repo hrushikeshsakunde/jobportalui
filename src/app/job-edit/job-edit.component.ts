@@ -17,7 +17,7 @@ export class JobEditComponent implements OnInit {
   constructor(private jobService: JobService,
               @Inject(MAT_DIALOG_DATA) public data: any,
               public dialogRef: MatDialogRef<JobEditComponent>) {}
-
+  /* Get existing data for job  */
   ngOnInit() {
       if (this.data.id) {
         this.jobService.get(this.data.id).subscribe((job: any) => {
@@ -31,7 +31,7 @@ export class JobEditComponent implements OnInit {
         });
       }
   }
-
+  /* Save new values of job  */
   save(form: NgForm): void {
     console.log('click');
     this.jobService.save(form, this.data.id , this.isEdit).subscribe(result => {

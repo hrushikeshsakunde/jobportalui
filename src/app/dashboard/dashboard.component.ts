@@ -4,6 +4,7 @@ import { JobEditComponent } from '../job-edit/job-edit.component';
 import { JobViewComponent } from '../job-view/job-view.component';
 import {MatDialog} from '@angular/material';
 
+/* This is landing page for website showing jobs */
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -19,11 +20,14 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.fetchData();
   }
+  /*Delete job from jobs  */
   remove(id) {
     this.jobService.remove(id).subscribe(result => {
       this.fetchData();
     }, error => console.error(error));
   }
+
+  /*Open popup for editing current job */
   openEditDialog(id) {
     const editDialogRef = this.dialog.open(JobEditComponent,
       {
@@ -36,6 +40,7 @@ export class DashboardComponent implements OnInit {
       this.fetchData();
     });
   }
+  /*Open popup show job in details  */
   openViewDialog(id) {
     const viewDialogRef = this.dialog.open(JobViewComponent,
       {
@@ -48,11 +53,14 @@ export class DashboardComponent implements OnInit {
       this.fetchData();
     });
   }
+  /* Get all job from backend  */
   fetchData() {
     this.jobService.getAll().subscribe(data => {
       this.jobs = data;
     });
   }
+
+  /* Search job and update job list  */
   searchJob() {
     if (this.searchKey !== '') {
       this.jobService.search(this.searchKey).subscribe(data => {
@@ -62,6 +70,7 @@ export class DashboardComponent implements OnInit {
       this.fetchData();
     }
   }
+  /* Get company logo  */
   imagePath(id) {
     return this.jobService.getImage(id);
   }
