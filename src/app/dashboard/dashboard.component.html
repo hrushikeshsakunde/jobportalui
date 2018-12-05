@@ -10,7 +10,7 @@
       <mat-card-header>
     <mat-card-subtitle> <p>{{job.companyName}}</p></mat-card-subtitle>
         <mat-card-title><a href="javascript:void(0);"  (click)="openViewDialog(job.id)" >{{job.title}}</a></mat-card-title>
-    <mat-card-subtitle> <b>Start Date :</b>{{job.beginning | date: 'MMMM dd, yyyy'}}  <b>  Location :</b>{{job.location}}</mat-card-subtitle>
+    <mat-card-subtitle> <b>Start Date : </b>{{job.beginning | date: 'MMMM dd, yyyy'}}  <b>  Location : </b>{{job.location}}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
         <p>{{job.tasks}}</p>

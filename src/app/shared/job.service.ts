@@ -42,9 +42,9 @@ export class JobService {
 
   getImage(id){
     if (id % 2 === 0  ) {
-      return '../assets/logo1.png';
+      return '../assets/logo2.png';
     } else {
-      return '../assets/logo1.jpg' ;
+      return '../assets/logo1.png' ;
     }
   }
 
